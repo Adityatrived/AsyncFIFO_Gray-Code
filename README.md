@@ -68,6 +68,8 @@ This project provides a highly reliable and parameterizable asynchronous FIFO (F
 
 ## Usage Example
 
+```
+
 // Instantiate a 32-bit wide, 64-entry asynchronous FIFO
 async_fifo #(
 .DATA_WIDTH(32),
@@ -83,6 +85,8 @@ async_fifo #(
 .full(fifo_full),
 .empty(fifo_empty)
 );
+
+```
 
 
 ---
@@ -142,16 +146,17 @@ async_fifo #(
 ### How to Run
 
 #### ModelSim/QuestaSim
-
+```
 vlog design.v testbench.v
 vsim tb_async_fifo
 run -all
-
+```
 
 #### Icarus Verilog
-
+```
 iverilog -o fifo_sim design.v testbench.v
 vvp fifo_sim
+```
 
 
 ### Expected Output
